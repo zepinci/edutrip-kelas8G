@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Taiwan Edutrip</title>
     <style>
-        body {
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            font-size: 16px;
             background-color: rgb(191, 234, 234);
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
@@ -20,9 +27,9 @@
 
         header a {
             color: floralwhite;
-            font-size: 30px;
+            font-size: 22px;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
             transition: color 0.3s ease;
         }
 
@@ -32,9 +39,9 @@
 
         h1 {
             text-align: center;
-            margin-top: 50px;
-            font-size: 36px;
-            color: rgb(42, 52, 165); 
+            margin-top: 40px;
+            font-size: 32px;
+            color: rgb(42, 52, 165);
         }
 
         .intro-text {
@@ -43,13 +50,12 @@
             padding: 20px;
             background-color: rgb(191, 234, 234);
             color: rgb(9, 38, 91);
-            font-size: 27px;
+            font-size: 20px;
             text-align: justify;
             border: 8px solid rgb(46, 84, 154);
             border-radius: 10px;
         }
 
-        /* Image Slider Styles */
         .slider-container {
             width: 80%;
             max-width: 800px;
@@ -123,19 +129,27 @@
         }
 
         @media (max-width: 768px) {
+            h1 {
+                font-size: 26px;
+            }
+
             .slider-container {
                 width: 95%;
                 height: 300px;
             }
-            
-            header a {
-                font-size: 20px;
-                margin: 0 10px;
+
+            .slider {
+                height: 300px;
             }
-            
+
+            header a {
+                font-size: 18px;
+                margin: 0 8px;
+            }
+
             .intro-text {
                 width: 90%;
-                font-size: 22px;
+                font-size: 18px;
             }
         }
     </style>
@@ -154,14 +168,12 @@
 
     <h1>Selamat datang di halaman Home</h1>
     
-    <!-- Introduction Text -->
     <div class="intro-text">
         Halo semuanya! Perkenalkan, saya Zevincy Marcelyn dari kelas 8G. Selamat datang di website edutrip saya! 
         Di sini, kalian dapat melihat keseruan saya selama edutrip saya ke Taiwan.
         Selamat membaca!
     </div>
 
-    <!-- Image Slider -->
     <div class="slider-container">
         <div class="slider">
             <img src="cover.jpg" alt="Taiwan Edutrip Cover">
@@ -182,7 +194,6 @@
     </div>
 
     <script>
-        // Image Slider Functionality
         document.addEventListener('DOMContentLoaded', function() {
             const slider = document.querySelector('.slider');
             const slides = document.querySelectorAll('.slider img');
@@ -193,33 +204,27 @@
             let currentIndex = 0;
             const slideCount = slides.length;
             
-            // Set initial slide position
             function updateSlider() {
                 slider.style.transform = `translateX(-${currentIndex * 100}%)`;
                 
-                // Update dots
                 dots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === currentIndex);
                 });
             }
             
-            // Next slide
             function nextSlide() {
                 currentIndex = (currentIndex + 1) % slideCount;
                 updateSlider();
             }
             
-            // Previous slide
             function prevSlide() {
                 currentIndex = (currentIndex - 1 + slideCount) % slideCount;
                 updateSlider();
             }
             
-            // Button events
             nextBtn.addEventListener('click', nextSlide);
             prevBtn.addEventListener('click', prevSlide);
             
-            // Dot navigation
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     currentIndex = index;
@@ -227,10 +232,8 @@
                 });
             });
             
-            // Auto-advance slides (optional)
             let slideInterval = setInterval(nextSlide, 5000);
             
-            // Pause on hover
             slider.addEventListener('mouseenter', () => {
                 clearInterval(slideInterval);
             });
@@ -239,7 +242,6 @@
                 slideInterval = setInterval(nextSlide, 5000);
             });
             
-            // Keyboard navigation
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowRight') nextSlide();
                 if (e.key === 'ArrowLeft') prevSlide();
