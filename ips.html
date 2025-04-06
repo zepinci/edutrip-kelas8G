@@ -5,11 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IPS - Taiwan Edutrip</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: rgb(191, 234, 234);
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
+      font-size: 16px;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     header {
@@ -20,9 +27,9 @@
 
     header a {
       color: floralwhite;
-      font-size: 30px;
+      font-size: 22px;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 12px;
       transition: color 0.3s ease;
     }
 
@@ -32,20 +39,21 @@
 
     h1 {
       text-align: center;
-      margin-top: 50px;
-      font-size: 36px;
+      margin-top: 40px;
+      font-size: 30px;
       color: rgb(42, 52, 165);
     }
 
     .experience-section {
       width: 80%;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 40px auto;
     }
 
     .experience-card {
       display: flex;
-      margin-bottom: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
       background-color: rgb(191, 234, 234);
       border: 8px solid rgb(46, 84, 154);
       border-radius: 15px;
@@ -53,20 +61,24 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .experience-image {
+    .image-container {
       width: 45%;
+      padding: 20px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 25px;
+    }
+
+    .experience-image {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .experience-image img {
       width: 100%;
       height: auto;
-      object-fit: contain;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.5s ease;
     }
 
@@ -76,21 +88,28 @@
 
     .experience-content {
       width: 55%;
-      padding: 30px;
-      font-size: 24px;
+      padding: 20px;
+      font-size: 18px;
       text-align: justify;
       color: rgb(9, 38, 91);
       line-height: 1.6;
     }
 
-    .experience-content p {
-      margin-bottom: 20px;
+    .experience-date {
+      font-weight: bold;
+      color: rgb(32, 59, 117);
+      margin-bottom: 10px;
+      font-size: 16px;
     }
 
     @media (max-width: 768px) {
       header a {
-        font-size: 20px;
-        margin: 0 10px;
+        font-size: 18px;
+        margin: 0 8px;
+      }
+
+      h1 {
+        font-size: 26px;
       }
 
       .experience-section {
@@ -101,18 +120,17 @@
         flex-direction: column;
       }
 
-      .experience-image,
-      .experience-content {
+      .image-container, .experience-content {
         width: 100%;
       }
 
-      .experience-image {
-        padding: 20px;
+      .image-container {
+        padding: 15px;
       }
 
       .experience-content {
-        padding: 25px;
-        font-size: 22px;
+        padding: 20px;
+        font-size: 17px;
       }
     }
   </style>
@@ -133,35 +151,33 @@
 
   <div class="experience-section">
     <div class="experience-card">
-      <div class="experience-image">
-        <img src="taipei 101.jpeg" alt="Gedung Taipei 101 Taiwan" />
+      <div class="image-container">
+        <div class="experience-image">
+          <img src="taipei 101.jpeg" alt="Gedung Taipei 101 Taiwan">
+        </div>
       </div>
       <div class="experience-content">
-        <p>
-          Bentuk-bentuk peradaban negara Taiwan dapat dilihat dari kondisi bangunan dan 
-          tata kota area destinasi, cara masyarakat merawat masa lalu, interaksi antar-generasi, serta
-          kepercayaan atau keyakinan masyarakat. Taipei 101 merupakan gedung tertinggi di negara
-          Taiwan yang memiliki 101 lantai dan terawat sangat baik dengan adanya rutinitas yang dijalani
-          untuk memastikan kestabilan gedung dan keselamatan pengunjung, seperti sistem anti guncangan
-          yang selalu terjaga. Tampilan serta kebersihan gedung juga selalu terjaga kualitasnya sehingga
-          nyaman dan aman untuk dikunjungi banyak orang. Taipei 101 terletak di distrik Xinyi yang merupakan
-          sebuah distrik yang menjadi pusat bisnis utama di Taipei. Di sekitar Taipei 101, ada banyak 
-          kantor-kantor seperti World Trade Center atau biasanya dikenal sebagai WTC. 
+        <p>Bentuk-bentuk peradaban negara Taiwan dapat dilihat dari kondisi bangunan dan 
+        tata kota area destinasi, cara masyarakat merawat masa lalu, interaksi antar-generasi, serta
+        kepercayaan atau keyakinan masyarakat. Taipei 101 merupakan gedung tertinggi di negara
+        Taiwan yang memiliki 101 lantai dan terawat sangat baik dengan adanya rutinitas yang dijalani
+        untuk memastikan kestabilan gedung dan keselamatan pengunjung, seperti sistem anti guncangan
+        yang selalu terjaga. Tampilan serta kebersihan gedung juga selalu terjaga kualitasnya sehingga
+        nyaman dan aman untuk dikunjungi banyak orang. Taipei 101 terletak di distrik Xinyi yang merupakan
+        sebuah distrik yang menjadi pusat bisnis utama di Taipei. Di sekitar Taipei 101, ada banyak 
+        kantor-kantor seperti World Trade Center atau biasanya dikenal sebagai WTC. 
         </p>
-        <p>
-          Di Taipei 101, orang tua dan anak-anak muda berinteraksi melalui beberapa aktivitas karena Taipei 101 memiliki banyak hiburan.
-          Orang tua lebih suka mengenal dan mempelajari sejarah gedung tersebut, sedangkan anak muda lebih suka
-          mempelajari bisnis. Di tempat kerja seperti kantor yang ada di dalam gedung Taipei 101, orang tua bisa 
-          berbagi pengalaman mereka dan anak muda bisa memberi ide-ide baru yang kreatif. 
+        <p>Di Taipei 101, orang tua dan anak-anak muda berinteraksi melalui beberapa aktivitas karena Taipei 101 memiliki banyak hiburan.
+        Orang tua lebih suka mengenal dan mempelajari sejarah gedung tersebut, sedangkan anak muda lebih suka
+        mempelajari bisnis. Di tempat kerja seperti kantor yang ada di dalam gedung Taipei 101, orang tua bisa 
+        berbagi pengalaman mereka dan anak muda bisa memberi ide-ide baru yang kreatif. 
         </p>
-        <p>
-          Taiwan merupakan negara maju dimana masyarakat biasanya beragama Buddha atau Taois. Namun, juga ada
-          masyarakat yang beragama Katolik dan Kristen namun sangat sedikit. Masyarakat Taiwan juga percaya dengan
-          feng shui, dimana Taipei 101 didesain menurut prinsip tersebut untuk membawa keberuntungan. Masyarakat Taiwan memelihara warisan budaya dengan adanya pertunjukkan kembang api yang spektakuler
-          di area Taipei 101 setiap tahun. Pertunjukkan ini menggabungkan teknologi modern dengan budaya mereka.
-          Selain itu, mereka juga mengadakan festival lentera yang biasanya diselenggarakan untuk merayakan
-          Tahun Baru Imlek yang juga merupakan salah satu tradisi Tionghoa.
-        </p>
+        <p>Taiwan merupakan negara maju dimana masyarakat biasanya beragama Buddha atau Taois. Namun, juga ada
+        masyarakat yang beragama Katolik dan Kristen namun sangat sedikit. Masyarakat Taiwan juga percaya dengan
+        feng shui, dimana Taipei 101 didesain menurut prinsip tersebut untuk membawa keberuntungan. Masyarakat Taiwan memelihara warisan budaya dengan adanya pertunjukkan kembang api yang spektakuler
+        di area Taipei 101 setiap tahun. Pertunjukkan ini menggabungkan teknologi modern dengan budaya mereka.
+        Selain itu, mereka juga mengadakan festival lentera yang biasanya diselenggarakan untuk merayakan
+        Tahun Baru Imlek yang juga merupakan salah satu tradisi Tionghoa.</p>
       </div>
     </div>
   </div>
