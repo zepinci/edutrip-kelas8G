@@ -5,11 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bahasa Indonesia - Taiwan Edutrip</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: rgb(191, 234, 234);
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
+      font-size: 16px;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     header {
@@ -20,9 +27,9 @@
 
     header a {
       color: floralwhite;
-      font-size: 30px;
+      font-size: 22px;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 12px;
       transition: color 0.3s ease;
     }
 
@@ -32,20 +39,21 @@
 
     h1 {
       text-align: center;
-      margin-top: 50px;
-      font-size: 36px;
+      margin-top: 40px;
+      font-size: 30px;
       color: rgb(42, 52, 165);
     }
 
     .experience-section {
       width: 80%;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 40px auto;
     }
 
     .experience-card {
       display: flex;
-      margin-bottom: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
       background-color: rgb(191, 234, 234);
       border: 8px solid rgb(46, 84, 154);
       border-radius: 15px;
@@ -55,12 +63,11 @@
 
     .image-container {
       width: 45%;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 20px;
-      box-sizing: border-box;
       gap: 20px;
+      justify-content: center;
     }
 
     .experience-image {
@@ -89,22 +96,21 @@
 
     .experience-content {
       width: 55%;
-      padding: 30px;
-      font-size: 22px;
+      padding: 20px;
+      font-size: 18px;
       text-align: justify;
       color: rgb(9, 38, 91);
       line-height: 1.6;
-      box-sizing: border-box;
-    }
-
-    .experience-content p {
-      margin-bottom: 20px;
     }
 
     @media (max-width: 768px) {
       header a {
-        font-size: 20px;
-        margin: 0 10px;
+        font-size: 18px;
+        margin: 0 8px;
+      }
+
+      h1 {
+        font-size: 26px;
       }
 
       .experience-section {
@@ -115,17 +121,16 @@
         flex-direction: column;
       }
 
-      .image-container,
-      .experience-content {
+      .image-container, .experience-content {
         width: 100%;
       }
 
       .image-container {
+        padding: 15px;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 15px;
-        padding: 20px;
+        justify-content: center;
       }
 
       .experience-image {
@@ -134,8 +139,8 @@
       }
 
       .experience-content {
-        padding: 25px;
-        font-size: 20px;
+        padding: 20px;
+        font-size: 17px;
       }
     }
   </style>
