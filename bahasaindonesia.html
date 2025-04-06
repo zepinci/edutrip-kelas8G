@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bahasa Indonesia - Taiwan Edutrip</title>
+  <style>
+    body {
+      background-color: rgb(191, 234, 234);
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgb(32, 59, 117);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header a {
+      color: floralwhite;
+      font-size: 30px;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: blue;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 36px;
+      color: rgb(42, 52, 165);
+    }
+
+    .experience-section {
+      width: 80%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    .experience-card {
+      display: flex;
+      margin-bottom: 40px;
+      background-color: rgb(191, 234, 234);
+      border: 8px solid rgb(46, 84, 154);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-container {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      gap: 20px;
+    }
+
+    .experience-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.5s ease;
+    }
+
+    .experience-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .experience-content {
+      width: 55%;
+      padding: 30px;
+      font-size: 22px;
+      text-align: justify;
+      color: rgb(9, 38, 91);
+      line-height: 1.6;
+      box-sizing: border-box;
+    }
+
+    .experience-content p {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      header a {
+        font-size: 20px;
+        margin: 0 10px;
+      }
+
+      .experience-section {
+        width: 95%;
+      }
+
+      .experience-card {
+        flex-direction: column;
+      }
+
+      .image-container,
+      .experience-content {
+        width: 100%;
+      }
+
+      .image-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .experience-image {
+        width: 45%;
+        aspect-ratio: 4 / 3;
+      }
+
+      .experience-content {
+        padding: 25px;
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="religiositas.html">Religiositas</a>
+    <a href="pkn.html">Pkn</a>
+    <a href="bahasaindonesia.html" style="color: blue;">Bahasa Indonesia</a>
+    <a href="bahasamandarin.html">Bahasa Mandarin</a>
+    <a href="bahasainggris.html">Bahasa Inggris</a>
+    <a href="ips.html">IPS</a>
+  </header>
+
+  <h1>Ini adalah halaman Bahasa Indonesia</h1>
+
+  <div class="experience-section">
+    <div class="experience-card">
+      <div class="image-container">
+        <div class="experience-image">
+          <img src="bedroom.jpg" alt="Kamar hotel" />
+        </div>
+        <div class="experience-image">
+          <img src="lobby.jpg" alt="Lobby hotel" />
+        </div>
+      </div>
+      <div class="experience-content">
+        <p>Kamar di hotel Holiday Inn Express sangat bersih, nyaman, dan rapi. Selain desain kamar yang elegan, fasilitas hotel juga sangat lengkap, mulai dari televisi, meja kerja yang luas, hingga bathtub juga ada. Pencahayaan kamar juga cukup terang dan hangat, serta kamar yang selalu bersih dan rapi berkat layanan housekeeping oleh pihak hotel.</p>
+        <p>Hotel Holiday Inn Express memiliki banyak keunggulan seperti fasilitas hotel yang cukup lengkap, sarapan pagi yang bervariasi, kamar hotel yang luas dan bersih, serta staf hotel yang sangat ramah. Tak lupa juga dengan letak hotel yang sangat strategis dan dekat dengan destinasi terkenal di Kota Kaohsiung.</p>
+        <p>Namun, beberapa fasilitas hotel seperti kolam renang dan area parkir yang lebih luas bisa ditambahkan supaya fasilitas hotel lebih lengkap. Selain itu, hanya ada dua lift di hotel yang berukuran kecil sehingga tamu harus menunggu cukup lama untuk naik dan turun secara bergantian saat jam sibuk seperti sarapan pagi. Hal ini juga bisa merepotkan tamu-tamu yang membawa koper besar ataupun yang bepergian dalam rombongan besar.</p>
+        <p>Dari segi kenyamanan dan lokasi, hotel Holiday Inn Express Kaohsiung Love River dapat menjadi pilihan hotel saat mengunjungi Kota Kaohsiung. Hotel ini menawarkan pengalaman menginap yang luar biasa dengan adanya lokasi hotel yang sangat dekat dengan berbagai destinasi populer, fasilitas yang cukup lengkap, serta kamar yang nyaman dan modern ini. Meskipun masih ada beberapa aspek yang bisa dikembangkan seperti keterbatasan lift dan area parkir, hotel ini masih menjadi pilihan hotel tepat untuk para pengunjung di Kota Kaohsiung.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

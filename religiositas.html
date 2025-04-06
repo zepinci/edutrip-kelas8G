@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Religiositas - Taiwan Edutrip</title>
+  <style>
+    body {
+      background-color: rgb(191, 234, 234);
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgb(32, 59, 117);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header a {
+      color: floralwhite;
+      font-size: 30px;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: blue;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 36px;
+      color: rgb(42, 52, 165);
+    }
+
+    .experience-section {
+      width: 80%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .experience-card {
+      display: flex;
+      margin-bottom: 40px;
+      background-color: rgb(191, 234, 234);
+      border: 8px solid rgb(46, 84, 154);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-image {
+      width: 45%;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .experience-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease;
+    }
+
+    .experience-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .experience-content {
+      width: 55%;
+      padding: 30px;
+      font-size: 22px;
+      text-align: justify;
+      color: rgb(9, 38, 91);
+      line-height: 1.6;
+      box-sizing: border-box;
+    }
+
+    .experience-date {
+      font-weight: bold;
+      color: rgb(32, 59, 117);
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      header a {
+        font-size: 20px;
+        margin: 0 10px;
+      }
+
+      .experience-section {
+        width: 95%;
+      }
+
+      .experience-card {
+        flex-direction: column;
+      }
+
+      .experience-image,
+      .experience-content {
+        width: 100%;
+      }
+
+      .experience-image {
+        padding: 20px;
+      }
+
+      .experience-content {
+        padding: 25px;
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">Home</a>
+    <a href="religiositas.html" style="color: blue;">Religiositas</a>
+    <a href="pkn.html">Pkn</a>
+    <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    <a href="bahasamandarin.html">Bahasa Mandarin</a>
+    <a href="bahasainggris.html">Bahasa Inggris</a>
+    <a href="ips.html">IPS</a>
+  </header>
+
+  <h1>Ini adalah halaman Religiositas</h1>
+
+  <div class="experience-section">
+    <div class="experience-card">
+      <div class="experience-image">
+        <img src="church.jpg" alt="Kunjungan ke Gereja" />
+      </div>
+      <div class="experience-content">
+        <div class="experience-date">9 Maret 2025</div>
+        <p>
+          Pada tanggal 9 Maret 2025, kami berkesempatan untuk mengunjungi sebuah gereja di Taiwan yaitu Taipei Holy Family Catholic Church. Di sana, kami mengikuti misa dalam bahasa Inggris yang merupakan sebuah pengalaman baru bagi saya. Gereja tersebut merupakan gereja terbesar di seluruh kota Taipei dan memiliki arsitektur yang sangat unik dan jendela patri yang bersejarah. Saya belajar banyak pengetahuan baru dari Romo, seperti analogi zooming in dan out dari kehidupan kita.
+        </p>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <div class="experience-image">
+        <img src="communitiy service.jpg" alt="Layanan Komunitas" />
+      </div>
+      <div class="experience-content">
+        <div class="experience-date">11 Maret 2025</div>
+        <p>
+          Pada tanggal 11 Maret 2025, kami mengunjungi oma dan opa Taiwan di Casa de Po Ai. Kami berinteraksi dan melakukan berbagai aktivitas bersama oma dan opa seperti belajar bahasa isyarat, senam, dan menari tarian Hawaii. Pengalaman tersebut sangat berarti bagi saya karena saya bisa berinteraksi dengan oma dan opa baru dan mengenal mereka lebih baik.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Taiwan Edutrip</title>
+    <style>
+        body {
+            background-color: rgb(191, 234, 234);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(32, 59, 117);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: floralwhite;
+            font-size: 30px;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: blue;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+            color: rgb(42, 52, 165); 
+        }
+
+        .intro-text {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgb(191, 234, 234);
+            color: rgb(9, 38, 91);
+            font-size: 27px;
+            text-align: justify;
+            border: 8px solid rgb(46, 84, 154);
+            border-radius: 10px;
+        }
+
+        /* Image Slider Styles */
+        .slider-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: 8px solid rgb(46, 84, 154);
+            border-radius: 10px;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 500px;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .slider-nav {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .slider-dot {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: rgb(46, 84, 154);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slider-dot.active {
+            background-color: rgb(32, 59, 117);
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(32, 59, 117, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(32, 59, 117, 0.8);
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 95%;
+                height: 300px;
+            }
+            
+            header a {
+                font-size: 20px;
+                margin: 0 10px;
+            }
+            
+            .intro-text {
+                width: 90%;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">Home</a>
+        <a href="religiositas.html">Religiositas</a>
+        <a href="pkn.html">Pkn</a>
+        <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+        <a href="bahasamandarin.html">Bahasa Mandarin</a>
+        <a href="bahasainggris.html">Bahasa Inggris</a>
+        <a href="ips.html">IPS</a>
+    </header>
+
+    <h1>Selamat datang di halaman Home</h1>
+    
+    <!-- Introduction Text -->
+    <div class="intro-text">
+        Halo semuanya! Perkenalkan, saya Zevincy Marcelyn dari kelas 8G. Selamat datang di website edutrip saya! 
+        Di sini, kalian dapat melihat keseruan saya selama edutrip saya ke Taiwan.
+        Selamat membaca!
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="cover.jpg" alt="Taiwan Edutrip Cover">
+            <img src="communitiy service.jpg" alt="Community Service">
+            <img src="national museum.jpg" alt="National Museum">
+            <img src="buddy i.jpg" alt="My Buddy">
+            <img src="aku dan emily.jpg" alt="Emily and I">
+        </div>
+        <button class="slider-btn prev">&#10094;</button>
+        <button class="slider-btn next">&#10095;</button>
+        <div class="slider-nav">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+        </div>
+    </div>
+
+    <script>
+        // Image Slider Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            
+            // Set initial slide position
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Next slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+            }
+            
+            // Button events
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlider();
+                });
+            });
+            
+            // Auto-advance slides (optional)
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            // Pause on hover
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            slider.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') nextSlide();
+                if (e.key === 'ArrowLeft') prevSlide();
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPS - Taiwan Edutrip</title>
+  <style>
+    body {
+      background-color: rgb(191, 234, 234);
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgb(32, 59, 117);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header a {
+      color: floralwhite;
+      font-size: 30px;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: blue;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 36px;
+      color: rgb(42, 52, 165);
+    }
+
+    .experience-section {
+      width: 80%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    .experience-card {
+      display: flex;
+      margin-bottom: 40px;
+      background-color: rgb(191, 234, 234);
+      border: 8px solid rgb(46, 84, 154);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-image {
+      width: 45%;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .experience-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease;
+    }
+
+    .experience-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .experience-content {
+      width: 55%;
+      padding: 30px;
+      font-size: 28px;
+      text-align: justify;
+      color: rgb(9, 38, 91);
+      line-height: 1.6;
+    }
+
+    .experience-content p {
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 768px) {
+      header a {
+        font-size: 20px;
+        margin: 0 10px;
+      }
+
+      .experience-section {
+        width: 95%;
+      }
+
+      .experience-card {
+        flex-direction: column;
+      }
+
+      .experience-image,
+      .experience-content {
+        width: 100%;
+      }
+
+      .experience-image {
+        padding: 20px;
+      }
+
+      .experience-content {
+        padding: 25px;
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">Home</a>
+    <a href="religiositas.html">Religiositas</a>
+    <a href="pkn.html">Pkn</a>
+    <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    <a href="bahasamandarin.html">Bahasa Mandarin</a>
+    <a href="bahasainggris.html">Bahasa Inggris</a>
+    <a href="ips.html" style="color: blue;">IPS</a>
+  </header>
+
+  <h1>Ini adalah halaman IPS</h1>
+
+  <div class="experience-section">
+    <div class="experience-card">
+      <div class="experience-image">
+        <img src="buddy i.jpg" alt="Taipei 101" />
+      </div>
+      <div class="experience-content">
+        <p>大家好! 我是吴欣竽, Zevincy。我今年十四岁, 上八年级。我是Santa Laurensia学校的中学生。
+          我在台湾认识了一个新朋友。她是台湾人, 叫Annie。她今年十六岁, 上十年级。她的生日是十一月十一日。
+          Annie是Saint Dominic学校的高中生。
+        </p>
+
+        <p>Annie长得很漂亮, 她个子高高的、身体瘦瘦的。她有大大的眼睛和长长的直发。
+          她的爱好是弹钢琴和吉他。Annie很喜欢吃薯条和苹果。
+          她的偶像是周杰伦。周杰伦是一位闻名的歌星, 也是一位音乐家。
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
