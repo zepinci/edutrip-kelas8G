@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Religiositas - Taiwan Edutrip</title>
+  <title>Pkn - Taiwan Edutrip</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: rgb(191, 234, 234);
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
+      font-size: 16px;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     header {
@@ -20,9 +27,9 @@
 
     header a {
       color: floralwhite;
-      font-size: 30px;
+      font-size: 22px;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 12px;
       transition: color 0.3s ease;
     }
 
@@ -32,8 +39,8 @@
 
     h1 {
       text-align: center;
-      margin-top: 50px;
-      font-size: 36px;
+      margin-top: 40px;
+      font-size: 30px;
       color: rgb(42, 52, 165);
     }
 
@@ -45,7 +52,8 @@
 
     .experience-card {
       display: flex;
-      margin-bottom: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
       background-color: rgb(191, 234, 234);
       border: 8px solid rgb(46, 84, 154);
       border-radius: 15px;
@@ -55,11 +63,8 @@
 
     .image-container {
       width: 45%;
-      padding: 25px;
+      padding: 20px;
       display: flex;
-      flex-direction: column;
-      gap: 25px;
-      box-sizing: border-box;
       justify-content: center;
     }
 
@@ -84,24 +89,28 @@
 
     .experience-content {
       width: 55%;
-      padding: 30px;
-      font-size: 22px;
+      padding: 20px;
+      font-size: 18px;
       text-align: justify;
       color: rgb(9, 38, 91);
       line-height: 1.6;
-      box-sizing: border-box;
     }
 
     .experience-date {
       font-weight: bold;
       color: rgb(32, 59, 117);
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      font-size: 16px;
     }
 
     @media (max-width: 768px) {
       header a {
-        font-size: 20px;
-        margin: 0 10px;
+        font-size: 18px;
+        margin: 0 8px;
+      }
+
+      h1 {
+        font-size: 26px;
       }
 
       .experience-section {
@@ -117,13 +126,12 @@
       }
 
       .image-container {
-        padding: 20px;
-        gap: 20px;
+        padding: 15px;
       }
 
       .experience-content {
-        padding: 25px;
-        font-size: 20px;
+        padding: 20px;
+        font-size: 17px;
       }
     }
   </style>
@@ -158,12 +166,12 @@
     <div class="experience-card">
       <div class="image-container">
         <div class="experience-image">
-          <img src="cks.jpg" alt="Ciang Kai Shek Memorial Hall">
+          <img src="cks.jpg" alt="Chiang Kai Shek Memorial Hall">
         </div>
       </div>
       <div class="experience-content">
         <div class="experience-date">13 Maret 2025</div>
-        <p>Pada tanggal 13 Maret 2025, kami juga mengunjungi Ciang Kai Shek Memorial Hall. Peran Ciang Kai Shek dalam membentuk Taiwan sebagai negara modern adalah dengan membangun militer Taiwan yang kuat, ekonomi yang stabil, serta modernisasi industri. Taiwan memiliki perkembangan yang sangat pesat, walaupun pemerintahannya otoriter. Namun, rasa nasionalisme Taiwan selalu berkembang dengan adanya identitas Taiwan yang semakin kuat seiring dengan perubahan sosial dan budaya. Ciang Kai Shek dan rezim Kuomintang juga menekankan pentingnya pendidikan seperti bahasa mandarin dan sejarah Tiongkok. Ciang Kai Shek juga menerapkan kebijakan otoriter untuk menjaga stabilitas politik seperti Kuomintang sebagai partai darurat serta memperkenalkan hukum darurat untuk mengendalikan masalah atau isu politik. Memorial Hall ini sangat menarik dan saya belajar banyak pengetahuan baru saat mengunjungi memorial hal tersebut.</p>
+        <p>Pada tanggal 13 Maret 2025, kami juga mengunjungi Chiang Kai Shek Memorial Hall. Peran Chiang Kai Shek dalam membentuk Taiwan sebagai negara modern adalah dengan membangun militer Taiwan yang kuat, ekonomi yang stabil, serta modernisasi industri. Taiwan memiliki perkembangan yang sangat pesat, walaupun pemerintahannya otoriter. Namun, rasa nasionalisme Taiwan selalu berkembang dengan adanya identitas Taiwan yang semakin kuat seiring dengan perubahan sosial dan budaya. Chiang Kai Shek dan rezim Kuomintang juga menekankan pentingnya pendidikan seperti bahasa Mandarin dan sejarah Tiongkok. Ia juga menerapkan kebijakan otoriter untuk menjaga stabilitas politik seperti Kuomintang sebagai partai darurat serta memperkenalkan hukum darurat untuk mengendalikan masalah atau isu politik. Memorial Hall ini sangat menarik dan saya belajar banyak pengetahuan baru saat mengunjunginya.</p>
       </div>
     </div>
   </div>
